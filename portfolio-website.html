@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricilla's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Global Styles ===== */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* ===== Header ===== */
+        header {
+            background: linear-gradient(90deg, #4CAF50, #2E8B57);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px 0;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ffe600;
+        }
+
+        /* ===== Sections ===== */
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2E8B57;
+        }
+
+        /* ===== About Section ===== */
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-pic {
+            max-width: 180px;
+            border-radius: 50%;
+            border: 4px solid #4CAF50;
+        }
+
+        /* ===== Projects ===== */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            color: #2E8B57;
+            margin: 15px;
+        }
+
+        .project-card p {
+            margin: 0 15px 15px 15px;
+        }
+
+        button {
+            margin: 0 15px 15px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* ===== Contact Form ===== */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2E8B57;
+            color: white;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* ===== Smooth Scroll ===== */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Pricilla Raj</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="https://via.placeholder.com/180" alt="Portrait of Pricilla Raj" class="profile-pic">
+            <p>Hello! I'm a web developer passionate about creating beautiful and interactive websites. I specialize in HTML, CSS, and JavaScript and love designing responsive layouts that look great on all devices.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x180" alt="Screenshot of Project 1">
+                <h3>Project 1</h3>
+                <p>A sample project demonstrating HTML, CSS, and JavaScript skills.</p>
+                <button class="learn-more" onclick="showAlert('Project 1')">Learn More</button>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x180" alt="Screenshot of Project 2">
+                <h3>Project 2</h3>
+                <p>Another project showcasing responsive design and interactivity.</p>
+                <button class="learn-more" onclick="showAlert('Project 2')">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Your Email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Pricilla Raj. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Alert function for project buttons
+        function showAlert(projectName) {
+            alert(`🌟 You clicked Learn More for ${projectName}!`);
+        }
+
+        // Contact form submission
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("✅ Thank you! Your message has been sent.");
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
